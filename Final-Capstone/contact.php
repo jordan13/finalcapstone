@@ -1,31 +1,7 @@
 <?php
-$servername = "localhost";
-$name = "name";
-$email = "email";
-$comments = "comments";
-$dbname = "emaildb";
 
-// Create connection
-$conn = new mysqli($servername, $name, $email, $comments, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
-// sql to create table
-$sql = "Cform (
-id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-Name VARCHAR(50) NOT NULL,
-Email VARCHAR(50) NOT NULL,
-Comments longtext NOT NULL,
-reg_date TIMESTAMP
-)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Table Cform created successfully";
-} else {
-    echo "Error creating table: " . $conn->error;
-}
+require_once(__DIR__ .. "/controller/create-db.php");
 
 if(isset($_POST['email'])){
 
