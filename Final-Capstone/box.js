@@ -48,4 +48,35 @@ function initDraw(canvas) {
             canvas.style.cursor = "crosshair";
         }
     }
+    $('#clear').click(function(){
+    signaturePad.clear();
+});
+$('.global-color li').click(function(){
+    $('.on').removeClass('on');
+    var $t = $(this);
+    $t.addClass('on');
+    var selectedColor = $t.data('color');
+    signaturePad.penColor = hexToRgb(selectedColor);
+    setCurrentColor(canvas, selectedColor);
+});
+
+//http://stackoverflow.com/a/5624139/1026459
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? "rgb("+parseInt(result[1], 16)+
+        ","+parseInt(result[2], 16)+
+        ","+parseInt(result[3], 16)+")"
+     : null;
+}
+
+// set all pixels of the image to this color
+function setCurrentColor(canvas, color) {
+   var context = canvas.getContext('2d');
+   context.save();
+   context.fillStyle = color;
+   context.globalCompositeOperation = 'source-in';
+   context.fillRect(0,0,canvas.width, canvas.height);
+   context.restore();
+}
+
 }
