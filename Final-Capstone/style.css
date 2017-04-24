@@ -8,7 +8,20 @@
   text-align: center;
   font-style: italic;
 }
-
+#can{
+    border: 1px solid black;
+    cursor:default;
+}
+.on{
+    background-color:#f1f1f1;
+    text-indent:10px;
+}
+.global-color li{
+    cursor:pointer;
+}
+.global-color li:hover{
+    text-decoration:underline;
+}
 #test2 {
   background-image: url("/Users/Student/Documents/GitHub/finalcapstone/Final-Capstone/images/city3.jpg");
   background-size: 100%;
