@@ -11,15 +11,20 @@ function initDraw(canvas) {
             mouse.x = ev.clientX + document.body.scrollLeft;
             mouse.y = ev.clientY + document.body.scrollTop;
         }
+
     };
+
 
     var mouse = {
         x: 0,
         y: 0,
         startX: 0,
         startY: 0
+
     };
     var element = null;
+
+
 
     canvas.onmousemove = function (e) {
         setMousePosition(e);
@@ -34,8 +39,8 @@ function initDraw(canvas) {
     canvas.onclick = function (e) {
         if (element !== null) {
             element = null;
-            canvas.style.cursor = "default";
-            console.log("finsihed.");
+            canvas.style.cursor = "crosshair";
+            console.log("finished.");
         } else {
             console.log("begun.");
             mouse.startX = mouse.x;

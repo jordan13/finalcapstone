@@ -10,14 +10,14 @@
 }
 #can{
     border: 1px solid black;
-    cursor:default;
+    cursor:crosshair;
 }
 .on{
     background-color:#f1f1f1;
     text-indent:10px;
 }
 .global-color li{
-    cursor:pointer;
+    cursor:crosshair;
 }
 .global-color li:hover{
     text-decoration:underline;
@@ -92,6 +92,12 @@ height:100%;
   text-align: center;
 }
 
+#dp {
+  width: auto;
+  height: auto;
+  padding: 20 0 0 15px;
+  margin: 400px 500px 40px auto;
+}
 #nice {
   width: auto;
   height: auto;
