@@ -46,6 +46,10 @@ function initDraw(canvas) {
             mouse.startX = mouse.x;
             mouse.startY = mouse.y;
             element = document.createElement('div');
+            // give color classes
+            // color = red;
+            // className = 'rectangle'+color
+
             element.className = 'rectangle';
             element.style.left = mouse.x + 'px';
             element.style.top = mouse.y + 'px';
@@ -56,13 +60,40 @@ function initDraw(canvas) {
     $('#clear').click(function(){
     signaturePad.clear();
 });
-$('.global-color li').click(function(){
-    $('.on').removeClass('on');
-    var $t = $(this);
-    $t.addClass('on');
-    var selectedColor = $t.data('color');
-    signaturePad.penColor = hexToRgb(selectedColor);
-    setCurrentColor(canvas, selectedColor);
+// $('.global-color li').click(function(){
+//     $('.on').removeClass('on');
+//     var $t = $(this);
+//     $t.addClass('on');
+//     var selectedColor = $t.data('color');
+//     signaturePad.penColor = hexToRgb(selectedColor);
+//     setCurrentColor(canvas, selectedColor);
+// });
+$('#yellow-pick').click(function (){
+  alert('clickeD!');
+
+//  $(".rectangle"+color).css("background-color","blue");
+  $(".rectangle").css("background-color","yellow");
+});
+
+$('#green-pick').click(function (){
+  alert('clickeD!');
+
+//  $(".rectangle"+color).css("background-color","blue");
+  $(".rectangle").css("background-color","green");
+});
+
+$('#orange-pick').click(function (){
+  alert('clickeD!');
+
+//  $(".rectangle"+color).css("background-color","blue");
+  $(".rectangle").css("background-color","orange");
+});
+
+$('#blue-pick').click(function (){
+  alert('clickeD!');
+
+//  $(".rectangle"+color).css("background-color","blue");
+  $(".rectangle").css("background-color","blue");
 });
 
 
