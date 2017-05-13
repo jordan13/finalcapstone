@@ -94,9 +94,14 @@ height:100%;
 
 #dp {
   width: auto;
+  text-align: center;
   height: auto;
-  padding: 20 0 0 15px;
-  margin: 400px 500px 40px auto;
+  margin: 0px 0px 0px 350px;
+}
+#dpb {
+  background-color: #FFFFCC;
+  height: 300px;
+  width: 500px;
 }
 #nice {
   width: auto;
